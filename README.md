@@ -7,6 +7,7 @@
 1. Перейти за посиланням SWI-Prolog https://matlab.mathworks.com/
 2. у командному рядку MATLAB ввести: fuzzyLogicDesigner
 3. Імпортувати файл .fis
+4. Документація https://www.mathworks.com/help/fuzzy/building-systems-with-fuzzy-logic-toolbox-software.html
 
 ## Як запускати Prolog
 1. Встанови SWI-Prolog https://www.swi-prolog.org
