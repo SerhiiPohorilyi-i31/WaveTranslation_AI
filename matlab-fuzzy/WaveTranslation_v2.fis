@@ -1,0 +1,79 @@
+[System]
+Name='WaveTranslation_v2'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=24
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='grammar_correctness'
+Range=[0 100]
+NumMFs=3
+MF1='Poor':'trapmf',[0 0 30 50]
+MF2='Acceptable':'trimf',[40 65 100]
+MF3='Excellent':'trapmf',[80 95 100 100]
+
+[Input2]
+Name='fluency'
+Range=[0 30]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 6 12]
+MF2='Medium':'trimf',[8 15 22]
+MF3='High':'trapmf',[18 24 30 30]
+
+[Input3]
+Name='urgency'
+Range=[0 1]
+NumMFs=2
+MF1='No':'trimf',[0 0.3 0.5]
+MF2='Yes':'trimf',[0.5 0.7 1]
+
+[Output1]
+Name='translation_quality'
+Range=[0 100]
+NumMFs=5
+MF1='Very_Poor':'trapmf',[0 0 10 25]
+MF2='Poor':'trimf',[15 30 45]
+MF3='Average':'trimf',[35 55 75]
+MF4='Good':'trimf',[65 80 95]
+MF5='Excellent':'trapmf',[85 95 100 100]
+
+[Output2]
+Name='translation_speed'
+Range=[0 12]
+NumMFs=3
+MF1='Slow':'trapmf',[0 0 4 6]
+MF2='Normal':'trimf',[5 7 10]
+MF3='Fast':'trapmf',[7 8.5 10 12]
+
+[Rules]
+1 1 1, 1 1 (1) : 1
+1 1 0, 1 1 (1) : 2
+1 1 2, 1 3 (1) : 1
+1 2 1, 2 1 (1) : 1
+1 2 2, 2 3 (1) : 1
+3 3 0, 4 2 (1) : 2
+1 3 1, 3 1 (1) : 1
+1 0 2, 2 3 (1) : 2
+1 3 2, 3 3 (1) : 1
+2 1 1, 2 1 (1) : 1
+2 1 2, 2 3 (1) : 1
+0 3 2, 4 3 (1) : 2
+2 2 1, 3 2 (1) : 1
+2 2 2, 3 3 (1) : 1
+2 3 1, 4 2 (1) : 1
+2 1 0, 3 2 (1) : 2
+2 3 2, 4 3 (1) : 1
+3 1 1, 3 2 (1) : 1
+3 1 2, 3 3 (1) : 1
+3 2 1, 4 2 (1) : 1
+3 0 1, 5 2 (1) : 2
+3 2 2, 4 3 (1) : 1
+3 3 1, 5 2 (1) : 1
+3 3 2, 5 3 (1) : 1
