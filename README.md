@@ -4,8 +4,7 @@
 Лабораторна №1: Fuzzy Logic Toolbox в MATLAB
 
 ## Структура
-- `/prolog/` — приклади коду SWI-Prolog
-- `/matlab-fuzzy/` — файли лабораторної №1
+
 
 ## Як запускати Prolog
 1. Встанови SWI-Prolog<a href="https://www.swi-prolog.org" target="_blank" rel="noopener noreferrer nofollow"></a>
