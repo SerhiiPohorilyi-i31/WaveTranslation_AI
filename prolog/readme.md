@@ -5,5 +5,5 @@
 
 
 ## Як запускати Prolog
-1. Встанови SWI-Prolog за посиланням https://www.swi-prolog.org
+1. Встановити SWI-Prolog за посиланням https://www.swi-prolog.org
 4. Приклад запиту: `?- good_translation("Добрий день", T).`
